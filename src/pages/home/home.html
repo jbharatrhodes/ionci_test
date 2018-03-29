@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h1>Main News</h1>
+  <ion-card *ngFor = "let music of mainNews">
+      <ion-card-content>
+          <ion-card-title>{{music.newsTitle}}</ion-card-title>
+          <ion-item>
+            <button ion-button item-left>Share</button>
+            <button ion-button item-right>Listen</button>
+          </ion-item>
+        </ion-card-content>
+    <!-- <img [src]=`http://www.parbatnepal.com/'> -->
+  </ion-card>
+
+  <h1>Foreign</h1>
+      <ion-card *ngFor = "let foreign of foreignNews">
+          <ion-card-content>
+              <ion-card-title>{{foreign.newsTitle}}</ion-card-title>
+              <ion-item>
+                <button ion-button item-left>Share</button>
+                <button ion-button item-right>Listen</button>
+              </ion-item>
+            </ion-card-content>
+        <!-- <img [src]=`http://www.parbatnepal.com/'> -->
+      </ion-card>
+
+  
+</ion-content>
